@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="adicionarItem">
+        <h1>Adicionar Tarefa</h1>
+        <form method="post">
+            <div class="titulo">
+                <label for="inputTitulo">Titulo:</label>
+                <input type="text" id="inputTitulo">
+            </div>
+            <div class="descricao">
+                <label for="inputDescricao">Descrição:</label>
+                <textarea id="inputDescricao" rows="5"></textarea>
+            </div>
+            <button type="submit" class="adicionarTarefa">Adicionar</button>
+        </form>
+    </div>
+    <main>
+        <div class="pendente coluna"></div>
+        <div class="fazendo coluna"></div>
+        <div class="feito coluna"></div>
+    </main>
+
+    <script src="./scripts/adicionarTarefa.js"></script>
+    <script src="./scripts/moverTarefa.js"></script>
+</body>
+</html>
