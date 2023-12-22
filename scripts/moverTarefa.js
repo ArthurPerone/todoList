@@ -11,6 +11,10 @@ document.addEventListener("dragend", (e) =>{
 columns.forEach((column) => {
     column.addEventListener("dragover", (e) =>{
         const dragging = document.querySelector(".dragging");
-        column.appendChild(dragging);
+        try{
+            column.appendChild(dragging);
+        }catch(err){
+            return
+        }            
     });
 });
