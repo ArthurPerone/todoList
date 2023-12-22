@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    max-width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, lightcoral, lightpink);
+}
+
+.adicionarItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.adicionarItem form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.adicionarItem form>div{
+    display: grid;
+    grid-template-columns: [label] 30% [input] 50%;
+}
+
+.adicionarItem form>* label{
+    grid-area: label;
+    text-align: right;
+}
+
+.adicionarItem form>* input, .adicionarItem form>* textarea{
+    font-size: 15px;
+    padding-left: 10px;
+    margin: 0 0 10px 10px;
+    grid-area: input;
+}
+
+.adicionarItem .descricao textarea{
+    resize: none;
+}
+
+.adicionarItem form button{
+    width: 50%;
+    margin: auto;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    min-height: 600px;
+    gap: 10px;
+    padding: 10px;
+}
+
+main .coluna{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 20%;
+    border-radius: 5px;
+    background-color: firebrick;
+}
+
+main .pendente::after{
+    content: "PENDENTE";
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+main .fazendo::after{
+    content: "FAZENDO";
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+main .feito::after{
+    content: "FEITO";
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    font-size: 40px;
+}
+
+
+main .coluna .tarefa{
+    padding: 10px;
+    width: 90%;
+    border-radius: 5px;
+    background-color: white;
+}
